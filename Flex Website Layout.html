@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <title>Flex Website Layout</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0px;
+            display: flex;
+            flex-direction: column;
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid rgb(92, 114, 48);
+            background-color: rgb(92, 114, 48);
+            align-items: center; 
+            padding: 10px 0px;
+        }
+        a{
+            text-decoration: none;
+            
+        }
+        header ul{
+            list-style-type: none;
+            display: flex;
+            padding: 0px;
+            margin: 0px;
+        }
+        header li{
+            padding: 0px 10px ;
+        }
+        #title{
+            margin: auto;
+            font-size: 30px ;
+        }
+        #menu{
+            padding: 10px;
+        }
+        header a{
+            color: white;
+        }
+        #main{
+            display: flex;
+            flex-direction: row;
+            height: fit-content;
+        }
+        aside{
+            flex:0 0 20vw;
+            padding: 0px;
+            background-color:beige;
+        }
+        aside ul{
+            list-style-type: none;
+            padding: 0px;  
+        }
+        aside ul li{
+            padding: 10px;
+            border-bottom:1px solid rgb(92, 114, 48);
+        }
+        aside a{
+            color: rgb(92, 114, 48);
+        }
+        aside img{
+            width: 100%;
+        }
+        article{
+            padding: 10px;
+            text-align: justify;
+        }
+        .services-container{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            flex-wrap: wrap;
+        }
+        .service-box{
+            border: 1px solid transparent;
+            flex-basis: 33%;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .service-box img{
+            height: 100%;
+            box-sizing: border-box;
+            width: 100%;
+            object-fit: cover;
+        }
+        .img{
+            height: 300px;
+            width: 100%;   
+        }
+        .call-to-action{
+            margin-top: auto;
+            align-self: flex-start;
+        }
+        .call-to-action a{
+            color: white;
+            padding: 10px 15px;
+            background-color: grey;
+            width: fit-content;
+            transition: 1s;
+        }
+        .call-to-action a:hover{
+            color: grey;
+            background-color: white;
+            border: 1px solid grey;
+        }
+        footer{
+            text-align: center;
+            padding: 5px 0px;
+            background-color: rgb(92, 114, 48);
+            color: white;
+            font-size: 20px;
+        }
+        @media screen and (max-width:800px){
+            aside{
+                flex: 0 0 30vw;
+            }
+            .service-box{
+            flex: 48%;
+        }
+        }
+        @media screen and (max-width:600px){
+            header{
+                flex-direction: column;
+            }
+            #title{
+                order: -1;
+            }
+            article{
+                order: -1;
+            }
+            #main{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav id="menu">
+            <ul>
+                <li><a href=""><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href=""><i class="fa-solid fa-circle-info"></i> About us</a></li>
+                <li><a href=""><i class="fa-solid fa-phone"></i> Contact us</a></li>
+            </ul>
+        </nav>
+        <div id="title">
+            <a href="">Flexbox Website Layout</a>
+        </div>
+        <nav id="social-links">
+            <ul>
+                <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-google-plus-g"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="main">
+        <aside>
+            <ul>
+                <li><a href="">Link 1</a></li>
+                <li><a href="">Link 2</a></li>
+                <li><a href="">Link 3</a></li>
+                <li><a href="">Link 4</a></li>
+                <li><a href="">Link 5</a></li>
+            </ul>
+            <img src="Images/georgie-cobbs-muOHbrFGEQY-unsplash.jpg" alt="">
+        </aside>
+        <article>
+            <h2>Welcome to page</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, tenetur et nulla laborum, rerum, ipsa eum consectetur aspernatur veniam omnis earum voluptas explicabo eveniet numquam repudiandae similique perspiciatis at alias iusto! Ad exercitationem distinctio nemo accusantium consequuntur porro corporis, nisi nostrum labore quod. Adipisci, mollitia. Repellendus eaque quis dolor saepe dolorem maiores voluptate doloribus voluptas repellat, commodi non esse cum facere culpa, enim iure! Molestias, recusandae nobis mollitia iusto illum, reiciendis accusamus vitae omnis non repellendus delectus voluptatum temporibus, ex dolor quibusdam necessitatibus beatae veniam iure quisquam minus amet voluptatem nesciunt eveniet! Quas, consequatur! Beatae totam tempore expedita possimus aliquid aspernatur. Est molestiae ipsa illum non commodi! Reiciendis ea vero, pariatur error ullam animi dignissimos aut tenetur beatae corporis sunt quas consectetur quia saepe consequatur doloribus itaque dolor. Ex officia recusandae, maiores aut reiciendis quas ut.</p>
+            <h2>Our Services</h2>
+            <div class="services-container">
+                <div class="service-box">
+                    <div class="img">
+                        <img src="Images/olena-sergienko-dIMJWLx1YbE-unsplash.jpg" alt="">
+                    </div>
+                    <div class="service-title">
+                        <h3>Web Designing</h3>
+                    </div>
+                    <div class="service-desc">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia id accusantium cum quae tempora perspiciatis voluptate dignissimos libero ea minima? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, sunt.</p>
+                    </div>
+                    <div class="call-to-action">
+                        <a href="">Read more</a>
+                    </div>
+                </div>
+                <div class="service-box">
+                    <div class="img">
+                        <img src="Images/studio-proper-4dqhR6dtbOs-unsplash.jpg" alt="">
+                    </div>
+                    <div class="service-title">
+                        <h3>Web Development</h3>
+                    </div>
+                    <div class="service-desc">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia id accusantium cum quae tempora perspiciatis voluptate dignissimos libero ea minima?</p>
+                    </div>
+                    <div class="call-to-action">
+                        <a href="">Read more</a>
+                    </div>
+                </div>
+                <div class="service-box">
+                    <div class="img">
+                        <img src="Images/william-hook-9e9PD9blAto-unsplash.jpg" alt="">
+                    </div>
+                    <div class="service-title">
+                        <h3>Mobile app</h3>
+                    </div>
+                    <div class="service-desc">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia id accusantium cum quae tempora perspiciatis voluptate dignissimos libero ea minima? Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="call-to-action">
+                        <a href="">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+    <footer>
+        <h3>@copyright</h3>
+    </footer>
+    
+</body>
+</html>
